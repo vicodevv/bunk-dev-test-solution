@@ -1,0 +1,25 @@
+{
+  "name": "bunk-dev-test-solution",
+  "version": "1.0.0",
+  "description": "A code challenge for new developers applying to work at Bunk.",
+  "main": "index.js",
+  "scripts": {
+    "server": "npm run dev --prefix server",
+    "client": "npm start --prefix client",
+    "start": "concurrently \"cd client && npm start\" \"cd server &&npm run dev\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vicodevv/bunk-dev-test-solution.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vicodevv/bunk-dev-test-solution/issues"
+  },
+  "homepage": "https://github.com/vicodevv/bunk-dev-test-solution#readme",
+  "dependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
