@@ -6,6 +6,7 @@
   "scripts": {
     "server": "npm run dev --prefix server",
     "client": "npm start --prefix client",
+    "install-all": "cd server && npm install && cd client && npm install",
     "start": "concurrently \"cd client && npm start\" \"cd server &&npm run dev\""
   },
   "repository": {

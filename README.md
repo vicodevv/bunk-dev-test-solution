@@ -59,7 +59,7 @@ Go to the project directory
 Install dependencies
 
 ```bash
-  npm install
+  npm install-all
 ```
 
 Run the code
