@@ -8,7 +8,7 @@ interface Expense {
 
 interface Payout {
   owes: string;
-  owed: string;
+  owed: string[];
   amount: number;
 }
 
@@ -43,7 +43,7 @@ const expenseController = {
       const travelerTotal = travelerTotals[name];
       if (travelerTotal < equalShare) {
         const owes = name;
-        const owed = uniqueNames.filter((name) => name !== owes)[0];
+        const owed = uniqueNames.filter((name) => name !== owes);
         const amount = equalShare - travelerTotal;
         payouts.push({ owes, owed, amount });
       }
