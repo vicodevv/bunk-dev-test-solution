@@ -10,7 +10,7 @@ import { ExpenseService } from '../../services/expense.service';
 export class ExpensesTableComponent {
   expenses: Expense[] = [];
   name: string = '';
-  amount: number = 0;
+  amount!: number;
 
   constructor(private expenseService: ExpenseService) { }
 

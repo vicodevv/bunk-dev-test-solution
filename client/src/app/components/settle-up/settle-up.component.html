@@ -2,11 +2,11 @@
   <button mat-raised-button color="danger" (click)="settleUp()">Settle Up</button>
 </div>
 
-<div *ngIf="showPayouts">
+<div *ngIf="showPayouts" class="payouts">
   <h2>Payouts</h2>
   <ul>
     <li *ngFor="let payout of payouts">
-      {{ payout.owes }} needs to pay {{ payout.owed }} £{{ payout.amount }}
+      <p>{{ payout.owes }} needs to pay {{ payout.owed }} £{{ payout.amount }}</p>
     </li>
   </ul>
 </div>
