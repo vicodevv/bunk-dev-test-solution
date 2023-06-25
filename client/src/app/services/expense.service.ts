@@ -1,40 +1,23 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { forkJoin, Observable } from 'rxjs';
-import { Expense } from '../model/expense';
-import { map } from 'rxjs/operators';
+import { Expense } from '../model/expense.model';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class ExpenseService {
-  private serviceUrl = 'http://localhost:3003/expense';
+  private expenses: Expense[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor() { }
 
-  getExpenses(): Observable<Expense[]> {
-    return this.http
-      .get(this.serviceUrl)
-      .pipe<Expense[]>(map((data: any) => data.Expenses));
+  addExpense(expense: Expense): void {
+    this.expenses.push(expense);
   }
 
-  updateExpense(Expense: Expense): Observable<Expense> {
-    return this.http.patch<Expense>(`${this.serviceUrl}/${Expense.id}`, Expense);
+  getExpenses(): Expense[] {
+    return this.expenses;
   }
 
-  addExpense(Expense: Expense): Observable<Expense> {
-    return this.http.post<Expense>(`${this.serviceUrl}/add`, Expense);
-  }
-
-  deleteExpense(id: number): Observable<Expense> {
-    return this.http.delete<Expense>(`${this.serviceUrl}/${id}`);
-  }
-
-  deleteExpenses(Expenses: Expense[]): Observable<Expense[]> {
-    return forkJoin(
-      Expenses.map((Expense) =>
-        this.http.delete<Expense>(`${this.serviceUrl}/${Expense.id}`)
-      )
-    );
+  clearExpenses(): void {
+    this.expenses = [];
   }
 }

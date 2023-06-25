@@ -10,8 +10,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatNativeDateModule } from '@angular/material/core';
-import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ExpensesTableComponent } from './components/expenses-table/expenses-table.component';
+import { SettleUpComponent } from './components/settle-up/settle-up.component';
 
 @NgModule({
   imports: [
@@ -27,7 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatDialogModule,
     HttpClientModule,
   ],
-  declarations: [AppComponent, ConfirmDialogComponent],
+  declarations: [AppComponent, ExpensesTableComponent, SettleUpComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
