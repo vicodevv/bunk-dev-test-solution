@@ -19,7 +19,9 @@ export class AppComponent {
   constructor(public dialog: MatDialog, private ExpenseService: ExpenseService) {}
 
   ngOnInit() {
-
+    this.ExpenseService.getExpenses().subscribe((res: any) => {
+      this.dataSource.data = res
+    })
   }
 
   editRow(row: Expense) {
