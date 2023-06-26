@@ -63,6 +63,14 @@ Go to the project directory
 
 Install dependencies
 
+To install the root dependencies such as 'cocurrently' , run the following command in your terminal
+
+```bash
+  npm install
+```
+
+To install the dependencies for the UI and API, run the following command in your terminal
+
 ```bash
   npm install-all
 ```
