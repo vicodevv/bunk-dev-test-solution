@@ -68,6 +68,32 @@ Run the code
   npm run start
 ```
 
+## Running Tests
+
+To test the API, run the following command in your terminal
+
+```bash
+  npm run test
+```
+
+The tests are written with Jest and Supertest and the test cases should run in the terminal
+
+To test the UI, run the following command in your terminal
+
+```bash
+  npm run e2e
+```
+
+The tests are written with Cypress
+
+- For the UI, a new browser window should open, after which you can select the E2E Testing option
+
+- You can choose which browser to run the tests, preferralbly Chrome.
+
+- Click on the Start Tests button to run the tests. A new browser window should open and the tests directory should be displayed in the browser. Locate the spec.cy.ts file and click on it to run the tests.
+
+NOTE: The E2E tests will not run if the API is already running on port 3000. You can stop the API and run the tests again.
+
 ## Postman Documentation
 
 https://documenter.getpostman.com/view/17026180/2s93z6e4CK

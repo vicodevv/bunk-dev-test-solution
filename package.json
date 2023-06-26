@@ -7,7 +7,9 @@
     "server": "npm run dev --prefix server",
     "client": "npm start --prefix client",
     "install-all": "cd server && npm install && cd client && npm install",
-    "start": "concurrently \"cd client && npm start\" \"cd server &&npm run dev\""
+    "start": "concurrently \"cd client && npm start\" \"cd server && npm run dev\"",
+    "test": "cd server && npm test",
+    "e2e": "concurrently \"npm start\" \"cd client && npm run cypress:open\""
   },
   "repository": {
     "type": "git",

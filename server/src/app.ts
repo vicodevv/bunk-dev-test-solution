@@ -16,7 +16,7 @@ app.use(morgan("combined"));
 
 app.use("/", apiRouter);
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3003;
 
 export const server = app.listen(port, () => {
     console.log(`Server is running on port http://localhost:${port}`);
