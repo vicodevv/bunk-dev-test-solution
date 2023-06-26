@@ -26,9 +26,9 @@ import { SettleUpComponent } from './components/settle-up/settle-up.component';
     FormsModule,
     MatCheckboxModule,
     MatDialogModule,
-    HttpClientModule,
+    HttpClientModule
   ],
   declarations: [AppComponent, ExpensesTableComponent, SettleUpComponent],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

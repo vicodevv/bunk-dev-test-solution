@@ -7,7 +7,7 @@ import { Expense } from '../model/expense.model';
 export class ExpenseService {
   private expenses: Expense[] = [];
 
-  constructor() { }
+  constructor() {}
 
   // Add expense to expenses array
   addExpense(expense: Expense): void {

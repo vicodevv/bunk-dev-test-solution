@@ -12,7 +12,7 @@ export class ExpensesTableComponent {
   name: string = '';
   amount!: number;
 
-  constructor(private expenseService: ExpenseService) { }
+  constructor(private expenseService: ExpenseService) {}
 
   addExpense(): void {
     const expense: Expense = { name: this.name, amount: this.amount };

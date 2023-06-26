@@ -1,7 +1,7 @@
 describe('Expenses', () => {
   beforeEach(() => {
     // Run any setup code or visit the initial page if needed
-    cy.visit('localhost:4200')
+    cy.visit('localhost:4200');
   });
 
   it('should calculate payouts correctly', () => {

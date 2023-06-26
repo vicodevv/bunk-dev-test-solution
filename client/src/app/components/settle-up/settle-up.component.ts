@@ -10,7 +10,7 @@ export class SettleUpComponent {
   showPayouts: boolean = false;
   payouts: any[] = [];
 
-  constructor(private expenseService: ExpenseService) { }
+  constructor(private expenseService: ExpenseService) {}
 
   settleUp(): void {
     const expenses = this.expenseService.getExpenses();
@@ -21,13 +21,13 @@ export class SettleUpComponent {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ expenses })
     })
-    .then(response => response.json())
-    .then(data => {
-      this.payouts = data.payouts;
-      this.showPayouts = true;
-    })
-    .catch(error => {
-      console.error('Error calculating payouts:', error);
-    });
+      .then((response) => response.json())
+      .then((data) => {
+        this.payouts = data.payouts;
+        this.showPayouts = true;
+      })
+      .catch((error) => {
+        console.error('Error calculating payouts:', error);
+      });
   }
 }
