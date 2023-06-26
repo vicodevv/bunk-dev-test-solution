@@ -46,7 +46,8 @@ const expenseController = {
         const owes = name;
         const owed = uniqueNames.filter((name) => name !== owes);
         const amount = equalShare - travelerTotal;
-        payouts.push({ owes, owed, amount });
+        const roundedAmount = amount.toFixed(2); // Round to 2 decimal places
+        payouts.push({ owes, owed, amount: Number(roundedAmount) });
       }
     });
 
