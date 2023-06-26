@@ -14,7 +14,12 @@ The UI was developed with the following technologies:
 
 - Angular
 - Typescript
-- Bootstrap
+
+Testing was done with the following technologies:
+
+- Jest
+- Supertest
+- Cypress
 
 ## Getting Started
 
