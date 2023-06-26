@@ -1,5 +1,5 @@
-import { Request, Response } from "express";
-import { sumBy, uniqBy, groupBy } from "lodash";
+import { Request, Response } from 'express';
+import { sumBy, uniqBy, groupBy } from 'lodash';
 
 interface Expense {
   name: string;
@@ -18,10 +18,10 @@ const expenseController = {
     const expenses: Expense[] = req.body.expenses;
 
     // Calculate total expenses
-    const total: number = sumBy(expenses, "amount");
+    const total: number = sumBy(expenses, 'amount');
 
     // Get unique traveler names
-    const uniqueNames: string[] = uniqBy(expenses, "name").map(
+    const uniqueNames: string[] = uniqBy(expenses, 'name').map(
       (expense) => expense.name
     );
 
@@ -31,11 +31,11 @@ const expenseController = {
     // Group expenses by traveler's name and calculate total expenses per traveler
     const groupedExpenses: Record<string, Expense[]> = groupBy(
       expenses,
-      "name"
+      'name'
     );
     const travelerTotals: Record<string, number> = {};
     Object.keys(groupedExpenses).forEach((name) => {
-      travelerTotals[name] = sumBy(groupedExpenses[name], "amount");
+      travelerTotals[name] = sumBy(groupedExpenses[name], 'amount');
     });
 
     // Calculate individual payouts for travelers who owe money
