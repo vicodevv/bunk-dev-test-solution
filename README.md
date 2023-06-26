@@ -47,7 +47,7 @@ You can get the latest version of Angular CLI by running the following command i
 Clone the project
 
 ```bash
-  git clone ggit@github.com:vicodevv/bunk-dev-test-solution.git
+  git clone git@github.com:vicodevv/bunk-dev-test-solution.git
 ```
 
 Go to the project directory

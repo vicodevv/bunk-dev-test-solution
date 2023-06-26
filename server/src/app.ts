@@ -16,8 +16,10 @@ app.use(morgan("combined"));
 
 app.use("/", apiRouter);
 
-const port = process.env.PORT
+const port = process.env.PORT || 3000;
 
-app.listen(port, () => {
+export const server = app.listen(port, () => {
     console.log(`Server is running on port http://localhost:${port}`);
-})
+  });
+
+export default app;

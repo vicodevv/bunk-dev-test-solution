@@ -16,7 +16,7 @@ export class SettleUpComponent {
     const expenses = this.expenseService.getExpenses();
 
     //API request to calculate payouts
-    fetch('http://localhost:3003/expense/add', {
+    fetch('http://localhost:3000/expense/add', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ expenses })
