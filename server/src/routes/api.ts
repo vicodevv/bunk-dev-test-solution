@@ -6,5 +6,4 @@ const apiRouter = express.Router();
 
 apiRouter.use("/expense", expenseRouter);
 
-
 export default apiRouter;

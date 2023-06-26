@@ -7,7 +7,7 @@ afterAll((done) => {
   server.close(done);
 });
 
-// Set up the test environment
+// Test environment
 process.env.NODE_ENV = 'test';
 
 describe('POST /expense/add', () => {
@@ -22,7 +22,7 @@ describe('POST /expense/add', () => {
         .post('/expense/add')
         .send({ expenses });
   
-      // Add your assertions here
+      // Check that the response is correct
       expect(response.status).toBe(200);
       expect(response.body.total).toBe(23.5);
     });

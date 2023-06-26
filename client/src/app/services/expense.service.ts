@@ -9,15 +9,13 @@ export class ExpenseService {
 
   constructor() { }
 
+  // Add expense to expenses array
   addExpense(expense: Expense): void {
     this.expenses.push(expense);
   }
 
+  // Return expenses array
   getExpenses(): Expense[] {
     return this.expenses;
-  }
-
-  clearExpenses(): void {
-    this.expenses = [];
   }
 }

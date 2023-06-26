@@ -12,6 +12,7 @@ interface Payout {
   amount: number;
 }
 
+// Controller for expense routes
 const expenseController = {
   add: (req: Request, res: Response): void => {
     const expenses: Expense[] = req.body.expenses;
@@ -19,7 +20,7 @@ const expenseController = {
     // Calculate total expenses
     const total: number = sumBy(expenses, "amount");
 
-    // Calculate unique names
+    // Get unique traveler names
     const uniqueNames: string[] = uniqBy(expenses, "name").map(
       (expense) => expense.name
     );

@@ -67,6 +67,12 @@ Install dependencies
   npm install-all
 ```
 
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+- PORT=your port number
+
 Run the code
 
 ```bash
