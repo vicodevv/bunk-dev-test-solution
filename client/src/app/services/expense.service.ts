@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Expense } from '../model/expense.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ExpenseService {
   private expenses: Expense[] = [];

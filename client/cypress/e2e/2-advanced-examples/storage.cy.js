@@ -67,8 +67,8 @@ context('Local Storage / Session Storage', () => {
         'https://example.cypress.io': {
           prop1: 'red',
           prop2: 'blue',
-          prop3: 'magenta'
-        }
+          prop3: 'magenta',
+        },
       });
     });
   });
@@ -96,8 +96,8 @@ context('Local Storage / Session Storage', () => {
         'https://example.cypress.io': {
           prop4: 'cyan',
           prop5: 'yellow',
-          prop6: 'black'
-        }
+          prop6: 'black',
+        },
       });
     });
   });

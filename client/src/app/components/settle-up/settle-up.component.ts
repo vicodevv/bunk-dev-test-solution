@@ -4,7 +4,7 @@ import { ExpenseService } from '../../services/expense.service';
 @Component({
   selector: 'app-settle-up',
   templateUrl: './settle-up.component.html',
-  styleUrls: ['./settle-up.component.scss']
+  styleUrls: ['./settle-up.component.scss'],
 })
 export class SettleUpComponent {
   showPayouts: boolean = false;
@@ -19,7 +19,7 @@ export class SettleUpComponent {
     fetch('http://localhost:3000/expense/add', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ expenses })
+      body: JSON.stringify({ expenses }),
     })
       .then((response) => response.json())
       .then((data) => {

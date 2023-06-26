@@ -12,7 +12,7 @@ context('Cypress APIs', () => {
       Cypress.Commands.add(
         'console',
         {
-          prevSubject: true
+          prevSubject: true,
         },
         (subject, method) => {
           // the previous subject is automatically received
@@ -128,7 +128,7 @@ context('Cypress APIs', () => {
       // set multiple environment variables
       Cypress.env({
         host: 'veronica.dev.local',
-        api_server: 'http://localhost:8888/v1/'
+        api_server: 'http://localhost:8888/v1/',
       });
 
       // get environment variable
@@ -190,7 +190,7 @@ context('Cypress APIs', () => {
       cy.wrap(Cypress.spec).should('include.keys', [
         'name',
         'relative',
-        'absolute'
+        'absolute',
       ]);
     });
   });
