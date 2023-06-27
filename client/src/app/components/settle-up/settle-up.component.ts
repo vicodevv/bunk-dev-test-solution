@@ -13,9 +13,13 @@ export class SettleUpComponent {
 
   constructor(private expenseService: ExpenseService) {}
 
+  /**
+   * Settles up the expenses and calculates the payouts.
+   * If successful, sets the payouts and shows them.
+   * If there is an error, logs the error to the console.
+   */
   settleUp(): void {
-    this.expenseService
-      .calculatePayouts()
+    this.expenseService.calculatePayouts()
       .then((payouts) => {
         this.payouts = payouts;
         this.showPayouts = true;
@@ -25,3 +29,4 @@ export class SettleUpComponent {
       });
   }
 }
+

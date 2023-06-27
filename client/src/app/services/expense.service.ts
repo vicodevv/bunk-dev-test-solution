@@ -10,14 +10,26 @@ export class ExpenseService {
 
   constructor() {}
 
+  /**
+   * Adds an expense to the list of expenses.
+   * @param expense The expense to add.
+   */
   addExpense(expense: Expense): void {
     this.expenses.push(expense);
   }
 
+  /**
+   * Retrieves the list of expenses.
+   * @returns The list of expenses.
+   */
   getExpenses(): Expense[] {
     return this.expenses;
   }
 
+  /**
+   * Calculates the payouts for the expenses.
+   * @returns A promise that resolves to the payouts.
+   */
   calculatePayouts(): Promise<any> {
     const expenses = this.getExpenses();
 
