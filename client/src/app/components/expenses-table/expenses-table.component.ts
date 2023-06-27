@@ -9,8 +9,8 @@ import { ExpenseService } from '../../services/expense.service';
 })
 export class ExpensesTableComponent {
   expenses: Expense[] = [];
-  name: string = '';
-  amount!: number;
+  name = '';
+  amount = 0;
 
   constructor(private expenseService: ExpenseService) {}
 
