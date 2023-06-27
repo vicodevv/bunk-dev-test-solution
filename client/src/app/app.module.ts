@@ -13,6 +13,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { HttpClientModule } from '@angular/common/http';
 import { ExpensesTableComponent } from './components/expenses-table/expenses-table.component';
 import { SettleUpComponent } from './components/settle-up/settle-up.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   imports: [
@@ -27,6 +28,7 @@ import { SettleUpComponent } from './components/settle-up/settle-up.component';
     MatCheckboxModule,
     MatDialogModule,
     HttpClientModule,
+    MatIconModule,
   ],
   declarations: [AppComponent, ExpensesTableComponent, SettleUpComponent],
   bootstrap: [AppComponent],

@@ -21,4 +21,8 @@ export class ExpensesTableComponent {
     this.name = '';
     this.amount = 0;
   }
+
+  removeExpense(index: number): void {
+    this.expenses.splice(index, 1);
+  }
 }

@@ -3,12 +3,18 @@
     <tr>
       <th>Name</th>
       <th>Expense</th>
+      <th>Action</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let expense of expenses">
+    <tr *ngFor="let expense of expenses; let i = index">
       <td>{{ expense.name }}</td>
       <td>{{ expense.amount }}</td>
+      <td>
+        <button class="delete-btn" mat-icon-button color="warn" (click)="removeExpense(i)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </td>
     </tr>
   </tbody>
 </table>
