@@ -1,6 +1,6 @@
 # Bunk Dev Test - Holiday Expenses Calculator
 
-A code challenge for new developers applying to work at Bunk.
+A code challenge
 
 ## Technologies
 
