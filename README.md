@@ -1,4 +1,4 @@
-# Bunk Dev Test - Holiday Expenses Calculator
+Holiday Expenses Calculator
 
 A code challenge
 
